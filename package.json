@@ -1,0 +1,29 @@
+{
+  "name": "ethereum-cryptostar-dapp",
+  "version": "1.0.0",
+  "description": "Cryptostar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziamalik/ethereum-cryptostar-dapp.git"
+  },
+  "keywords": [
+    "ethereum"
+  ],
+  "author": "Zia Malik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ziamalik/ethereum-cryptostar-dapp/issues"
+  },
+  "homepage": "https://github.com/ziamalik/ethereum-cryptostar-dapp#readme",
+  "devDependencies": {
+    "truffle": "^5.0.29"
+  },
+  "dependencies": {
+    "openzeppelin-solidity": "^2.3.0",
+    "truffle-hdwallet-provider": "^1.0.15"
+  }
+}
