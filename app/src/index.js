@@ -41,6 +41,17 @@ const App = {
 
   // Implement Task 4 Modify the front end of the DAPP
   lookUp: async function (){
+    const { lookUptokenIdToStarInfo, ownerOf } = this.meta.methods;
+    const lookid = document.getElementById("lookid").value;
+    const name = await lookUptokenIdToStarInfo(lookid).call();
+    if (!name) {
+      App.setStatus("No such Star exisits.");
+    }
+    else {
+      const owner = await ownerOf(lookid).call();
+      App.setStatus("Star Name: <b>" + name + "</b>, Owned by: <b>" + owner +"</b>");
+    }
+    
     
   }
 
