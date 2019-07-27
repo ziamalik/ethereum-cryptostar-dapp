@@ -25,8 +25,16 @@
 const HDWalletProvider = require('truffle-hdwallet-provider');
 
 const fs = require('fs');
-const infuraKey = fs.readFileSync(".infura-project-id").toString().trim();
-const mnemonic = fs.readFileSync(".secret-mnemonic").toString().trim();
+var infuraKey; 
+var mnemonic;
+
+try {
+  infuraKey = fs.readFileSync(".infura-project-id").toString().trim();
+  mnemonic = fs.readFileSync(".secret-mnemonic").toString().trim();
+}
+catch (err) {
+  console.log("Your .secret-mnemonic and/or .infure-project-id file not found. Cannot run on Rinkeby.");
+}
 
 module.exports = {
   /**
